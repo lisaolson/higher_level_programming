@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-for c in range(0, 26):
-    if c != 4 and c != 16:
-        print(chr(ord('a') + c), end='')
+for c in range(97, 123):
+    if c != 101 and c != 113:
+        print("{}".format(chr(c)), end="")
