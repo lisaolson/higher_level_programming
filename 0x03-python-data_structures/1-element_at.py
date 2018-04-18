@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def element_at(my_list, idx):
-    if not my_list:
+    if my_list == []:
         return None
 
     if idx < len(my_list):
