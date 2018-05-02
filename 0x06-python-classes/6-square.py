@@ -1,6 +1,14 @@
 #!/usr/bin/python3
 class Square:
     def __init__(self, size=0, position=(0, 0)):
+        """
+        Args:
+            size (int): private instance attribute with optional size
+
+        Raises:
+            TypeError: If size is not an integer
+            ValueError: If size is a negative number
+        """
         if type(size) is not int:
             raise TypeError("size must be an integer")
         if size < 0:
@@ -14,6 +22,14 @@ class Square:
 
     @size.setter
     def size(self, value):
+        """
+        Args:
+            value (int): instance attribute with value of size
+
+        Raises:
+            TypeError: If size is not an integer
+            ValueError: If size is a negative number
+        """
         self.__size = value
         if type(value) is not int:
             raise TypeError("size must be an integer")
@@ -27,6 +43,14 @@ class Square:
 
     @position.setter
     def position(self, value):
+        """
+        Args:
+            value (int): instance attribute with value of size
+
+        Raises:
+            TypeError: If size is not an integer
+            ValueError: If size is a negative number
+        """
         if type(self.__position) is not int:
             raise TypeError("position must be a tuple of 2 positive integers")
         if self.__position < 0:
@@ -34,11 +58,23 @@ class Square:
         return self.__position
 
     def area(self):
+        """
+        Defines logic for finding area
+
+        Returns:
+            Integer containing value of area
+        """
         area = 0
         area = self.__size * self.__size
         return area
 
     def my_print(self):
+        """
+        Defines logic for printing a square
+
+        Returns: None
+            
+        """
         if self.__size == 0:
             print()
         for j in range(0, self.__position[1]):
