@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 class Square:
     def __init__(self, size=0):
-        """
-        Args:
+        """Args:
             size (int): private instance attribute with optional size
 
         Raises:
@@ -21,8 +20,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """
-        Args:
+        """Args:
             value (int): instance attribute with value of size
 
         Raises:
@@ -37,8 +35,7 @@ class Square:
         return value
 
     def area(self):
-        """
-        Defines logic for finding area
+        """Defines logic for finding area
 
         Returns:
             Integer containing value of area
@@ -48,8 +45,7 @@ class Square:
         return area
 
     def my_print(self):
-        """
-        Defines logic for printing a square
+        """Defines logic for printing a square
 
         Returns: None
         """
