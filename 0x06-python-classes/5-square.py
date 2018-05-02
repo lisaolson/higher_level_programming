@@ -52,7 +52,6 @@ class Square:
         Defines logic for printing a square
 
         Returns: None
-            
         """
         if self.__size == 0:
             print()
