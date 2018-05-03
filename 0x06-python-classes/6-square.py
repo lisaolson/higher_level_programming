@@ -60,7 +60,8 @@ class Square:
             raise ValueError("position must be a tuple of 2 positive integers")
         if value[1] < 0:
             raise ValueError("position must be a tuple of 2 positive integers")
-        return self.__position
+        self.__position = value
+        return value
 
     def area(self):
         """Defines logic for finding area
