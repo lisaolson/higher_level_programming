@@ -12,10 +12,19 @@ def text_indentation(text):
     """
     if type(text) is not str:
         raise TypeError("text must be a string")
-    for i in text:
-        print(i, end="")
-        if i == '?' or i == '.' or i == ':':
+
+    text = text.strip()
+
+    i = 0
+    while i < len(text):
+        print(text[i], end="")
+        if (text[i] == '?' or text[i] == '.' or text[i] == ':') and i != len - 1:
             print("\n")
-        if i == "\n":
-            print(i.lstrip())
+            i += 1
+            while text[i] == ' ' and text[i + 1] == ' ':
+                i += 1
+        else:
+            print("\n")
+            return
+        i += 1
     print()
