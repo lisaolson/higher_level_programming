@@ -18,3 +18,4 @@ ValueError: size must be >= 0
 >>> print_square("abc")
 Traceback (most recent call last):
 TypeError: size must be an integer
+

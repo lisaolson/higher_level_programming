@@ -1,9 +1,9 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 >>> text_indentation("Simple sentences? Like, hi I am Lisa: I like coffee! And music")
 Simple sentences?
-
+<BLANKLINE>
 Like, hi I am Lisa:
-
+<BLANKLINE>
 I like coffee! And music
 
 >>> text_indentation(9118723)
@@ -12,19 +12,45 @@ TypeError: text must be a string
 
 >>> text_indentation("         Simple sentences? Like, hi I am Lisa: I like coffee            ")
 Simple sentences?
-
+<BLANKLINE>
 Like, hi I am Lisa:
-
+<BLANKLINE>
 I like coffee
 
 >>> text_indentation("I like coffee.              And things:        So?     Ok")
 I like coffee.
-
+<BLANKLINE>
 And things:
-
+<BLANKLINE>
 So?
-
+<BLANKLINE>
 Ok
 
 >>> text_indentation("I like coffee.")
+I like coffee.
+<BLANKLINE>
 
+>>> text_indentation(4.5)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation("hello .... ? ::: hi")
+hello .
+<BLANKLINE>
+.
+<BLANKLINE>
+ ?
+<BLANKLINE>
+:
+<BLANKLINE>
+:
+<BLANKLINE>
+hi
+
+>>> text_indentation({"hi": 7})
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation((1,2,3))
+Traceback (most recent call last):
+TypeError: text must be a string

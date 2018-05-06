@@ -15,3 +15,41 @@ TypeError: last_name must be a string
 >>> say_my_name(12, "Bob")
 Traceback (most recent call last):
 TypeError: first_name must be a string
+
+>>> say_my_name(14, 14)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name(4.5, 5.7)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("string", 0000.5)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name("", "")
+My name is  
+
+>>> say_my_name("")
+My name is  
+
+>>> say_my_name(None, None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Lisa", None)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name("Lisa", None)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name(None, "lisa")
+Traceback (most recent call last):
+TypeError: first_name must be a string

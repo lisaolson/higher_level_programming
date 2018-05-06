@@ -8,13 +8,59 @@
 >>> add_integer(2)
 100
 
+>>> add_integer(-2)
+96
+
 >>> add_integer(100.3, -2)
 98
+
+>>> add_integer(1.5, 1.2)
+2
+
+>>> add_integer(3.14)
+101
+
+>>> add_integer(0234.6, 987234.9)
+987468
+
+>>> add_integer(19827398729384791823712, 123978293847928374928374981)
+123998121246657759720198693
 
 >>> add_integer(4, "School")
 Traceback (most recent call last):
 TypeError: b must be an integer
 
+>>> add_integer("hi")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
 >>> add_integer("Hey", 5)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer("hi", "hi")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(0.4, 0.4)
+0
+
+>>> add_integer(345L, 45.67)
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+>>> add_integer(None, 4)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(4, None)
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(None)
 Traceback (most recent call last):
 TypeError: a must be an integer
