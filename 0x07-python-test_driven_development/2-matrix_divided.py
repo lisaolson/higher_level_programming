@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Module to return matrix of divided integers
+"""
+
 def matrix_divided(matrix, div):
     """Divides all elements of a matrix
 

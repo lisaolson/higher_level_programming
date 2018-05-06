@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Module to print 2 new lines after specified characters
+"""
 def text_indentation(text):
     """Prints text with 2 new lines after certain characters
     Args:
@@ -18,13 +20,12 @@ def text_indentation(text):
     i = 0
     while i < len(text):
         print(text[i], end="")
-        if (text[i] == '?' or text[i] == '.' or text[i] == ':') and i != len - 1:
+        if text[i] == '?' or text[i] == '.' or text[i] == ':':
             print("\n")
+            if i == (len(text) - 1):
+                return
             i += 1
             while text[i] == ' ' and text[i + 1] == ' ':
                 i += 1
-        else:
-            print("\n")
-            return
         i += 1
     print()
