@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 """Unittest for max_integer([..])
 """
+
+
 import unittest
 max_integer = __import__('6-max_integer').max_integer
+
 
 class TestMaxInteger(unittest.TestCase):
 
@@ -11,12 +14,15 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-5, 4, 10]), 10)
         self.assertEqual(max_integer([-15, -12]), -12)
         self.assertEqual(max_integer([4.1, 4, 2, 3]), 4.1)
-        self.assertEqual(max_integer([5729810298347362832973, 2345, 1234]), 5729810298347362832973)
+        self.assertEqual(max_integer([57298102983, 2345, 1234]), 57298102983)
         self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer([True, False, 200]), 200)
+        self.assertEqual(max_integer((1,2,3,4,5)), 5)
+        self.assertEqual(max_integer([[1, 2, 3, 4], [1, 2, 3, 50]]),\
+        [1, 2, 3, 50])
 
         self.assertRaises(TypeError, max_integer, [1, 2, "a"])
-        self.assertRaises(TypeError, max_integer, (1,2,3,4))
+        self.assertTrue(len(max_integer.__doc__) != 0)
 
 if __name__ == "__main__":
     unittest.main()

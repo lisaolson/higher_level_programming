@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Module to print 2 new lines after specified characters
 """
+
+
 def text_indentation(text):
     """Prints text with 2 new lines after certain characters
     Args:

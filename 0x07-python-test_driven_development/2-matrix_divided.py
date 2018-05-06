@@ -2,6 +2,7 @@
 """Module to return matrix of divided integers
 """
 
+
 def matrix_divided(matrix, div):
     """Divides all elements of a matrix
 
@@ -20,6 +21,22 @@ def matrix_divided(matrix, div):
     """
     divided = []
 
+    if matrix is None:
+        raise TypeError("matrix must be a matrix (list of lists)\
+ of integers/floats")
+    if type(matrix[0]) is tuple:
+        raise TypeError("matrix must be a matrix (list of lists)\
+ of integers/floats")
+    if type(matrix[1]) is tuple:
+        raise TypeError("matrix must be a matrix (list of lists)\
+ of integers/floats")
+    if type(matrix[0]) is dict:
+        raise TypeError("matrix must be a matrix (list of lists)\
+ of integers/floats")
+    if type(matrix[1]) is dict:
+        raise TypeError("matrix must be a matrix (list of lists)\
+ of integers/floats")
+
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
     if div == 0:
@@ -28,10 +45,10 @@ def matrix_divided(matrix, div):
     for j in matrix:
         for k in j:
             if type(k) is not int and type(k) is not float:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError("matrix must be a matrix (list of lists)\
+ of integers/floats")
                 return
             continue
-    
 
     for row in matrix:
         if len(row) != len(matrix[0]):

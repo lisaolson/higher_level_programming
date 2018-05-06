@@ -2,6 +2,7 @@
 """Module to find result of adding two integers
 """
 
+
 def add_integer(a, b=98):
     """Adds integer a and integer b and returns result
 
