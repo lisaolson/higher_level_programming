@@ -30,4 +30,3 @@ def text_indentation(text):
             while text[i] == ' ' and text[i + 1] == ' ':
                 i += 1
         i += 1
-    print()
