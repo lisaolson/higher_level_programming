@@ -98,6 +98,8 @@ class Rectangle:
         Returns:
             New string with no extra newline
         """
+        if self.__width == 0 or self.__height == 0:
+            return ""
         new_list = []
         for x in range(0, self.__height):
             for y in range(0, self.__width):
