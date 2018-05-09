@@ -71,4 +71,4 @@ TypeError: a must be an integer
 
 >>> add_integer(float('NaN'))
 Traceback (most recent call last):
-TypeError: a must be an integer
+ValueError: cannot convert float NaN to integer
