@@ -69,6 +69,6 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 TypeError: a must be an integer
 
->>> add_integer(float('NaN')) # doctest: +ELLIPSIS
+>>> add_integer(float('NaN'), 6) # doctest: +ELLIPSIS
 Traceback (most recent call last):
 ...
