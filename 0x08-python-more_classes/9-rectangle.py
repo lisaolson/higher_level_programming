@@ -90,6 +90,7 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             perimeter = 0
+            return perimeter
         perimeter = 0
         perimeter = 2 * (self.__width + self.__height)
         return perimeter
@@ -169,6 +170,8 @@ class Rectangle:
         Returns:
             new width and height for Rectangle instance
         """
+        if self.__width == 0 or self.__height == 0:
+            return ""
         if type(size) is not int:
             raise TypeError("width must be an integer")
         if size < 0:
