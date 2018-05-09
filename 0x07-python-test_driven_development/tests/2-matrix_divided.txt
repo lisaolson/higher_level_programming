@@ -19,11 +19,13 @@ Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 >>> matrix_divided([(1, 2, 3), [4, 5, 6]], 3)
-Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists) of integers/floats
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
 >>> matrix_divided([[4.57, 3.99, 2.345], [3.6, 298.4, 83.9]], 5)
 [[0.91, 0.8, 0.47], [0.72, 59.68, 16.78]]
+
+>>> matrix_divided([[3]], 3)
+[[1.0]]
 
 >>> matrix_divided([[98723984729837918723982739487293847918793817349, 1837492837492834928374928374928375982759, 18726938176298723940234762837462873], [198237918724981739879837492837492834, 982734982374971098702983482, 283740283482736498276349872]], 9)
 [[1.0969331636648658e+46, 2.0416587083253723e+38, 2.080770908477636e+33], [2.202643541388686e+34, 1.0919277581944124e+26, 3.15266981647485e+25]]
@@ -43,7 +45,7 @@ TypeError: matrix_divided() missing 1 required positional argument: 'div'
 Traceback (most recent call last):
 TypeError: Each row of the matrix must have the same size
 
->>> matrix_divided([{}, {}], 4)
+>>> matrix_divided([{"a": 5}, {"k": 7}], 4)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
