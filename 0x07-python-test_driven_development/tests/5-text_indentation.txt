@@ -34,19 +34,6 @@ I like coffee.
 Traceback (most recent call last):
 TypeError: text must be a string
 
->>> text_indentation("hello .... ? ::: hi")
-hello .
-<BLANKLINE>
-.
-<BLANKLINE>
- ?
-<BLANKLINE>
-:
-<BLANKLINE>
-:
-<BLANKLINE>
-hi
-
 >>> text_indentation({"hi": 7})
 Traceback (most recent call last):
 TypeError: text must be a string
@@ -55,22 +42,9 @@ TypeError: text must be a string
 Traceback (most recent call last):
 TypeError: text must be a string
 
->>> text_indentation(".?::..?     ?    .     .")
-.
-<BLANKLINE>
-:
-<BLANKLINE>
-.
-<BLANKLINE>
-?
-<BLANKLINE>
-?
-<BLANKLINE>
-.
-<BLANKLINE>
-.
-<BLANKLINE>
-
 >>> text_indentation([1,2,3])
 Traceback (most recent call last):
 TypeError: text must be a string
+
+>>> text_indentation("Holberton School")
+Holberton School
