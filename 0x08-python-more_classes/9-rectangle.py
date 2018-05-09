@@ -50,7 +50,6 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        return value
 
     @property
     def height(self):
@@ -132,7 +131,7 @@ class Rectangle:
         Returns:
             Nothing
         """
-        print("Bye rectangle...")
+        return print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
     @staticmethod
@@ -172,10 +171,10 @@ class Rectangle:
         Returns:
             new width and height for Rectangle instance
         """
-        if type(size) is not int:
-            raise TypeError("width must be an integer")
-        if size < 0:
-            raise ValueError("width must be >= 0")
+#        if type(size) is not int:
+ #           raise TypeError("width must be an integer")
+  #      if size < 0:
+   #         raise ValueError("width must be >= 0")
         width = size
         height = size
         return cls(width, height)
