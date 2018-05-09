@@ -101,6 +101,8 @@ class Rectangle:
         Returns:
             New string with no extra newline
         """
+        if self.__width == 0 or self.__height == 0:
+            return ""
         new_list = []
         if self.__width == 0 or self.__height == 0:
             return ''.join(new_list).rstrip()
@@ -170,8 +172,6 @@ class Rectangle:
         Returns:
             new width and height for Rectangle instance
         """
-        if self.__width == 0 or self.__height == 0:
-            return ""
         if type(size) is not int:
             raise TypeError("width must be an integer")
         if size < 0:
