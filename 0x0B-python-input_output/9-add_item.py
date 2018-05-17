@@ -15,5 +15,3 @@ i = 0
 while (sys.argv != '\0'):
     print(sys.argv)
     i += 1
-
-

@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def read_lines(filename="", nb_lines=0):
     with open(filename) as f:
         lineNum = 0
