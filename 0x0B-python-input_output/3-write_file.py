@@ -3,4 +3,5 @@
 
 def write_file(filename="", text=""):
     with open(filename, 'r+') as f:
-        return f.write(text)
+        chars = f.write(text)
+        return chars
