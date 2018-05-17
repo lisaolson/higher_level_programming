@@ -2,6 +2,6 @@
 
 
 def write_file(filename="", text=""):
-    with open(filename, "r+", encoding="UTF8") as f:
+    with open(filename, "w") as f:
         chars = f.write(text)
         return chars
