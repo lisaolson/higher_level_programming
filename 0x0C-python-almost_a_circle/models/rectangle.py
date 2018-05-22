@@ -103,4 +103,12 @@ class Rectangle(Base):
                     self.__x = y
                 if x == "y":
                     self.__y = y
-        
+
+    def to_dictionary(self):
+        new_dict = {}
+        new_dict['id'] = self.id
+        new_dict['width'] = self.width
+        new_dict['height'] = self.height
+        new_dict['x'] = self.x
+        new_dict['y'] = self.y
+        return new_dict
