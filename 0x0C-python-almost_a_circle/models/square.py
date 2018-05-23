@@ -22,13 +22,15 @@ class Square(Rectangle):
     def __str__(self):
         """Returns formatted string
         """
-        return "[Square] ({}) {}/{} - {}".format(self.id,
-               self.x, self.y, self.size)
+
+        strr = "[Square] ({}) {}/{} - {}"
+        return strr.format(self.id, self.x, self.y, self.size)
 
     @property
     def size(self):
         """Returns size
         """
+
         return self.__size
 
     @size.setter
@@ -37,6 +39,7 @@ class Square(Rectangle):
         Args:
             value (int): value as integer
         """
+
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -51,6 +54,7 @@ class Square(Rectangle):
             *args: sends non-keyworded variable
             *kwargs: passes keyworded variable length
         """
+
         if args is not None and len(args) > 0:
             for x, y in enumerate(args):
                 if x == 0:
@@ -76,6 +80,7 @@ class Square(Rectangle):
     def to_dictionary(self):
         """Returns dictionary representation of a Square
         """
+
         new_dict = {}
         new_dict['id'] = self.id
         new_dict['size'] = self.size
