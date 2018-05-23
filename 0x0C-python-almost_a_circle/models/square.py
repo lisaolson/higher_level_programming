@@ -23,7 +23,8 @@ class Square(Rectangle):
     def __str__(self):
         """Returns formatted string
         """
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size)
+        return "[Square] ({}) {}/{} - {}".format(self.id,
+               self.x, self.y, self.size)
 
     @property
     def size(self):
@@ -52,7 +53,7 @@ class Square(Rectangle):
             *kwargs: passes keyworded variable length arguments to fctn
         """
         if args is not None and len(args) > 0:
-            for x,y in enumerate(args):
+            for x, y in enumerate(args):
                 if x == 0:
                     self.id = y
                 if x == 1:
@@ -63,7 +64,7 @@ class Square(Rectangle):
                     self.y = y
 
         elif kwargs is not None:
-            for x,y in kwargs.items():
+            for x, y in kwargs.items():
                 if x == "id":
                     self.id = y
                 if x == "width":
@@ -81,4 +82,4 @@ class Square(Rectangle):
         new_dict['size'] = self.size
         new_dict['x'] = self.x
         new_dict['y'] = self.y
-        return new_dict        
+        return new_dict
