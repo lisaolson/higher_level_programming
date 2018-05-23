@@ -1,15 +1,17 @@
 #!/usr/bin/python3
-"""Module to define Square Class
-"""
+"""Module to define Square Class"""
+
+
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Defines Rectangle, inherits from Base
-    """
+
+    """Defines Rectangle, inherits from Base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Instantiation with width, height, x, y, id
+
         Args:
             id (int): id value as integer
             width (int): width value as integer
@@ -17,6 +19,7 @@ class Rectangle(Base):
             x (int): x value as integer initiated with 0
             y (int): y value as integer initiated with 0
         """
+
         self.width = width
         self.height = height
         self.x = x
@@ -25,8 +28,8 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Returns width
-        """
+        """Returns width"""
+
         return self.__width
 
     @width.setter
@@ -35,6 +38,7 @@ class Rectangle(Base):
         Args:
             value (int): value as integer
         """
+
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -43,8 +47,8 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Returns height
-        """
+        """Returns height"""
+
         return self.__height
 
     @height.setter
@@ -53,6 +57,7 @@ class Rectangle(Base):
         Args:
             value (int): value as integer
         """
+
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -61,8 +66,8 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """Returns x
-        """
+        """Returns x"""
+
         return self.__x
 
     @x.setter
@@ -71,6 +76,7 @@ class Rectangle(Base):
         Args:
             value (int): value as integer
         """
+
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -79,8 +85,8 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """Returns y
-        """
+        """Returns y"""
+
         return self.__y
 
     @y.setter
@@ -89,6 +95,7 @@ class Rectangle(Base):
         Args:
             value (int): value as integer
         """
+
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -96,13 +103,13 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """Returns area
-        """
+        """Returns area"""
+
         return (self.__width * self.__height)
 
     def display(self):
-        """Returns print of square
-        """
+        """Returns print of square"""
+
         for b in range(self.__y):
             print()
         for x in range(self.__height):
@@ -113,8 +120,8 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        """Returns formatted string
-        """
+        """Returns formatted string"""
+
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                self.__x, self.__y, self.__width, self.__height)
 
@@ -124,6 +131,7 @@ class Rectangle(Base):
             *args: sends non-keyworded variable length argument list to fctn
             *kwargs: passes keyworded variable length arguments to fctn
         """
+
         if args is not None and len(args) > 0:
             for x, y in enumerate(args):
                 if x == 0:
@@ -150,8 +158,8 @@ class Rectangle(Base):
                     self.__y = y
 
     def to_dictionary(self):
-        """Returns dictionary representation of a Square
-        """
+        """Returns dictionary representation of a Square"""
+
         new_dict = {}
         new_dict['id'] = self.id
         new_dict['width'] = self.width
