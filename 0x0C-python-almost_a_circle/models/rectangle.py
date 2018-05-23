@@ -3,7 +3,6 @@
 """
 
 
-import sys
 from models.base import Base
 
 
