@@ -16,7 +16,6 @@ class Square(Rectangle):
             x (int): x value as integer initiated with 0
             y (int): y value as integer initiated with 0
         """
-        self.size = size
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
@@ -31,7 +30,7 @@ class Square(Rectangle):
         """Returns size
         """
 
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -46,7 +45,6 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.width = value
         self.height = value
-        self.__size = value
 
     def update(self, *args, **kwargs):
         """Assigns an argument to each attribute
@@ -66,12 +64,12 @@ class Square(Rectangle):
                 if x == 3:
                     self.y = y
 
-        elif kwargs is not None:
+        if kwargs is not None:
             for x, y in kwargs.items():
                 if x == "id":
                     self.id = y
-                if x == "width":
-                    self.size = y
+                if x == "size":
+                    self.width = y
                 if x == "x":
                     self.x = y
                 if x == "y":
