@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Module to define Square Class
 """
-
-
 from models.base import Base
 
 
@@ -19,11 +17,11 @@ class Rectangle(Base):
             x (int): x value as integer initiated with 0
             y (int): y value as integer initiated with 0
         """
-        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
