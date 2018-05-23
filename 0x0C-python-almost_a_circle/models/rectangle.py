@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Module to define Square Class
 """
-
 import sys
 from models.base import Base
 
