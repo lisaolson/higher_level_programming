@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Module to define Square Class
 """
-
 from models.base import Base
 from models.rectangle import Rectangle
 
@@ -49,8 +48,8 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """Assigns an argument to each attribute
         Args:
-            *args: sends non-keyworded variable length argument list to fctn
-            *kwargs: passes keyworded variable length arguments to fctn
+            *args: sends non-keyworded variable
+            *kwargs: passes keyworded variable length
         """
         if args is not None and len(args) > 0:
             for x, y in enumerate(args):
