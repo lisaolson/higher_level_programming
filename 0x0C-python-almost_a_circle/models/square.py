@@ -1,23 +1,42 @@
 #!/usr/bin/python3
+"""Module to define Square Class
+"""
 
 from models.base import Base
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """Defines Square, inherits from Rectangle
+    """
     def __init__(self, size, x=0, y=0, id=None):
+        """Instantiation with size, x, y, id
+        Args:
+            id (int): id value as integer
+            size (int): size value as integer
+            x (int): x value as integer initiated with 0
+            y (int): y value as integer initiated with 0
+        """
         self.size = size
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """Returns formatted string
+        """
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size)
 
     @property
     def size(self):
+        """Returns size
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
+        """Sets values of width, height and size
+        Args:
+            value (int): value as integer
+        """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -27,6 +46,11 @@ class Square(Rectangle):
         self.__size = value
 
     def update(self, *args, **kwargs):
+        """Assigns an argument to each attribute
+        Args:
+            *args: sends non-keyworded variable length argument list to fctn
+            *kwargs: passes keyworded variable length arguments to fctn
+        """
         if args is not None and len(args) > 0:
             for x,y in enumerate(args):
                 if x == 0:
@@ -50,6 +74,8 @@ class Square(Rectangle):
                     self.y = y
 
     def to_dictionary(self):
+        """Returns dictionary representation of a Square
+        """
         new_dict = {}
         new_dict['id'] = self.id
         new_dict['size'] = self.size

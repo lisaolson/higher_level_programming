@@ -1,11 +1,23 @@
 #!/usr/bin/python3
+"""Module to define Square Class
+"""
 
 import sys
 from models.base import Base
 
 
 class Rectangle(Base):
+    """Defines Rectangle, inherits from Base
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Instantiation with width, height, x, y, id
+        Args:
+            id (int): id value as integer
+            width (int): width value as integer
+            height (int): height value as integer
+            x (int): x value as integer initiated with 0
+            y (int): y value as integer initiated with 0
+        """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -14,10 +26,16 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """Returns width
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """Sets value of width
+        Args:
+            value (int): value as integer
+        """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -26,10 +44,16 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """Returns height
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Sets value of height
+        Args:
+            value (int): value as integer
+        """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -38,10 +62,16 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """Returns x
+        """
         return self.__x
 
     @x.setter
     def x(self, value):
+        """Sets value of x
+        Args:
+            value (int): value as integer
+        """
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -50,10 +80,16 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """Returns y
+        """
         return self.__y
 
     @y.setter
     def y(self, value):
+        """Sets value of y
+        Args:
+            value (int): value as integer
+        """
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -61,9 +97,13 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """Returns area
+        """
         return (self.__width * self.__height)
 
     def display(self):
+        """Returns print of square
+        """
         for b in range(self.__y):
             print()
         for x in range(self.__height):
@@ -74,11 +114,19 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        """Returns formatted string
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format\
+               (self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
+        """Assigns an argument to each attribute
+        Args:
+            *args: sends non-keyworded variable length argument list to fctn
+            *kwargs: passes keyworded variable length arguments to fctn
+        """
         if args is not None and len(args) > 0:
-            for x,y in enumerate(args):
+            for x, y in enumerate(args):
                 if x == 0:
                     self.id = y
                 if x == 1:
@@ -90,7 +138,7 @@ class Rectangle(Base):
                 if x == 4:
                     self.__y = y
         elif kwargs is not None:
-            for x,y in kwargs.items():
+            for x, y in kwargs.items():
                 if x == "id":
                     self.id = y
                 if x == "width":
@@ -103,6 +151,8 @@ class Rectangle(Base):
                     self.__y = y
 
     def to_dictionary(self):
+        """Returns dictionary representation of a Square
+        """
         new_dict = {}
         new_dict['id'] = self.id
         new_dict['width'] = self.width
