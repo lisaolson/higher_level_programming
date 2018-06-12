@@ -52,21 +52,31 @@ The command interpreter should be capable of:
 | show | Prints the string represenation of an instance based on the class name and id |
 | update | Updates an instance based on the class name and id by adding or updating attribute |
 
-### Usage
-##### Installation
-git clone
+### Installation
+``` ./hsh
+git clone git@github.com:Mikaelia/AirBnB_clone.git
+```
 
-##### Command Line Usage
+### Command Line Usage
 ``` ./hsh
 create - create <class name>
 show - show <class name> <id>
 destroy - destroy <class name> <id>
 all - all or all <class name>
 update - update <class name> <id> <attribute name> "<attribute value">
+quit - quit
 ```
 
 ### Examples
-``` ./hsh  
+``` ./hsh
+$ ./console.py
+(hbnb) 
+(hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+all  create  destroy  help  quit  show  update
+
 (hbnb) create BaseModel
 1cf88285-079b-4f35-81c6-5535e231aaeb
 
