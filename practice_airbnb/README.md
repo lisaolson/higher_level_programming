@@ -59,12 +59,12 @@ git clone git@github.com:Mikaelia/AirBnB_clone.git
 
 ### Command Line Usage
 ``` ./hsh
-create - create <class name>
-show - show <class name> <id>
-destroy - destroy <class name> <id>
-all - all or all <class name>
-update - update <class name> <id> <attribute name> "<attribute value">
-quit - quit
+**create** - create <class name>
+**show** - show <class name> <id>
+**destroy** - destroy <class name> <id>
+**all** - all or all <class name>
+**update** - update <class name> <id> <attribute name> "<attribute value">
+**quit** - quit
 ```
 
 ### Examples
