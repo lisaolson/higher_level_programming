@@ -6,7 +6,7 @@ The goal for this project was to build a command line interpreter that can :
 - Create the first abstracted storage engine of the project: File Storage
 - Create all unittests to validate all our classes and storage engine
 
-## Command Interpreter
+### Command Interpreter
 The command interpreter should be capable of:
 - Creating a new object
 - Retrieving an object from a file, a database, etc...
@@ -14,7 +14,7 @@ The command interpreter should be capable of:
 - Updating attributes of an object
 - Destroying an object
 
-## Project Goals
+### Project Goals
 - Create a Python package
 - Create a command interpreter in Python using the cmd module
 - Implement unit testing at a large scale
@@ -25,14 +25,14 @@ The command interpreter should be capable of:
 - Know how to use \*args and \*\*kwargs
 - Know how to handle named arguments in a function
 
-## Directory Descriptions
+### Directory Descriptions
 | Directory | Description |
 | ------------- |:-------------:|
 | models | contains all models |
 | engine | contains file_storage module to interact with data |
 | tests | contains all unit tests |
 
-## File Descriptions
+### File Descriptions
 | File | Description |
 | ------------- |:-------------:|
 | console.py | entry point of the command interpreter |
@@ -52,15 +52,35 @@ The command interpreter should be capable of:
 | show | Prints the string represenation of an instance based on the class name and id |
 | update | Updates an instance based on the class name and id by adding or updating attribute |
 
+### Usage
+##### Installation
+git clone
+
+##### Command Line Usage
+``` ./hsh
+create - create <class name>
+show - show <class name> <id>
+destroy - destroy <class name> <id>
+all - all or all <class name>
+update - update <class name> <id> <attribute name> "<attribute value">
+```
+
 ### Examples
 ``` ./hsh  
 (hbnb) create BaseModel
+1cf88285-079b-4f35-81c6-5535e231aaeb
 
-(hbnb) show BaseModel 111111
+(hbnb) show BaseModel 1cf88285-079b-4f35-81c6-5535e231aaeb
+[BaseModel] (1cf88285-079b-4f35-81c6-5535e231aaeb) {'updated_at': datetime.datetime(2018, 6, 12, 22, 26, 12, 803233), 'id': '1cf88285-079b-4f35-81c6-5535e231aaeb', 'created_at': datetime.datetime(2018, 6, 12, 22, 26, 12, 803196)}
 
-(hbnb) destroy BaseModel 111111
+(hbnb) update BaseModel 1cf88285-079b-4f35-81c6-5535e231aaeb email "thisisanexample@gmail.com
 
-(hbnb) update BaseModel 11111 
+(hbnb) show BaseModel 1cf88285-079b-4f35-81c6-5535e231aaeb
+[BaseModel] (1cf88285-079b-4f35-81c6-5535e231aaeb) {'id': '1cf88285-079b-4f35-81c6-5535e231aaeb', 'updated_at': datetime.datetime(2018, 6, 12, 22, 26, 12, 803233), 'email': '"thisisanexample@gmail.com', 'created_at': datetime.datetime(2018, 6, 12, 22, 26, 12, 803196)}
+
+(hbnb) all
+[[BaseModel] (d29e08db-73a0-47c3-90b8-8e8986dc4a5d) {'updated_at': datetime.datetime(2018, 6, 12, 22, 26, 42, 978598), 'id': 'd29e08db-73a0-47c3-90b8-8e8986dc4a5d', 'created_at': datetime.datetime(2018, 6, 12, 22, 26, 42, 978575)}, [BaseModel] (1cf88285-079b-4f35-81c6-5535e231aaeb) {'id': '1cf88285-079b-4f35-81c6-5535e231aaeb', 'updated_at': datetime.datetime(2018, 6, 12, 22, 26, 12, 803233), 'email': '"thisisanexample@gmail.com', 'created_at': datetime.datetime(2018, 6, 12, 22, 26, 12, 803196)}]
+[[BaseModel] (d29e08db-73a0-47c3-90b8-8e8986dc4a5d) {'updated_at': datetime.datetime(2018, 6, 12, 22, 26, 42, 978598), 'id': 'd29e08db-73a0-47c3-90b8-8e8986dc4a5d', 'created_at': datetime.datetime(2018, 6, 12, 22, 26, 42, 978575)}, [BaseModel] (1cf88285-079b-4f35-81c6-5535e231aaeb) {'updated_at': datetime.datetime(2018, 6, 12, 22, 26, 12, 803233), 'id': '1cf88285-079b-4f35-81c6-5535e231aaeb', 'created_at': datetime.datetime(2018, 6, 12, 22, 26, 12, 803196)}]
 ```
 
 #### Authors
