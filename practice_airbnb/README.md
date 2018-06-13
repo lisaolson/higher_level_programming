@@ -58,14 +58,14 @@ git clone git@github.com:Mikaelia/AirBnB_clone.git
 ```
 
 ### Command Line Usage
-<pre>
-  <b>create</b> - create <class name>
-  <b>show</b> - show <class name> <id>
-  <b>destroy</b> - destroy <class name> <id>
-  <b>all</b> - all or all <class name>
-  <b>update</b> - update <class name> <id> <attribute name> "<attribute value">
-  <b>quit</b> - quit
-    </pre>
+``` ./hsh
+  Create - create <class name>
+  Show - show <class name> <id>
+  Destroy - destroy <class name> <id>
+  All - all or all <class name>
+  Update - update <class name> <id> <attribute name> "<attribute value>"
+  Quit - quit
+```
 
 ### Examples
 ``` ./hsh
