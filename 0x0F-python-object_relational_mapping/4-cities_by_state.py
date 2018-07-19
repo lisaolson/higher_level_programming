@@ -14,7 +14,7 @@ db = MySQLdb.connect(
 )
 
 c = db.cursor()
-c.execute("SELECT id, name FROM cities ORDER BY id ASC")
+c.execute("SELECT cities.id, cities.name, states.name FROM cities JOIN states ON cities.state_id = states.id ORDER BY id ASC")
 query_rows = c.fetchall()
 for row in query_rows:
 	print(row)
