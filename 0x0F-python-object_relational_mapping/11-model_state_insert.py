@@ -18,10 +18,10 @@ Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
 
 session = Session()
-louisiana = State("Louisiana")
+state_lou = State(name="Louisiana")
 
-session.add(louisiana)
+session.add(state_lou)
 session.commit()
 
-print(states.id)
+print(state_lou.id)
 session.close()
