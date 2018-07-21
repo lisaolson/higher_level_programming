@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Module to list all cities from hbtn_0e_4_usa
+"""Lists all cities of state given
 """
+
 import MySQLdb
 import sys
-
 
 db = MySQLdb.connect(
     host="localhost",
@@ -14,9 +14,9 @@ db = MySQLdb.connect(
 )
 
 c = db.cursor()
-c.execute("SELECT cities.id, cities.name, states.name\
-            FROM cities JOIN states ON\
-            cities.state_id = states.id ORDER BY id ASC")
+c.execute("SELECT cities.name FROM cities JOIN states\
+            ON cities.state_id = states.id WHERE\
+            states.name = '%s' ORDER BY cities.id ASC" % sys.argv[4])
 query_rows = c.fetchall()
 for row in query_rows:
     print(row)
