@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""Module to list all State objects from the database hbtn_0e_6_usa
+"""Module to print all City objects from the database hbtn_0e_14_usa
 """
 
 import MySQLdb
 import sqlalchemy
 import sys
 from model_state import Base, State
+from model_city import City
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -19,7 +20,7 @@ Session = sessionmaker(bind=engine)
 
 session = Session()
 
-for state in session.query(State).filter(State.name.contains('a')).order_by(State.id).all():
-    print("{}: {}".format(state.id, state.name))
+for state, city in session.query(State, City).filter(State.id==City.state_id).all():
+	print("{}: ({}) {}".format(state.name, city.id, city.name))
 
 session.close()
