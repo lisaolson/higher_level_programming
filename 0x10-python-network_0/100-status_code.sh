@@ -1,3 +1,3 @@
 #!/bin/bash
 # Returns status code
-curl -sL -w "%{http_code}" -I "$1" -o /dev/null
+curl $1 -sI -w '%{http_code}' -o /dev/null
