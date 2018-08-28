@@ -10,4 +10,4 @@ for(let i = 2; i < process.argv.length; i++) {
   arr.push(Number(process.argv[i]));
 }
 arr = arr.sort()
-console.log(arr[arr.length - 1]);
+console.log(arr[arr.length - 2]);
