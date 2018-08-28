@@ -1,5 +1,5 @@
 #!/usr/bin/node
-function factorial(x) {
+function factorial (x) {
   if (process.argv.length === 2) {
     return 1;
   }
