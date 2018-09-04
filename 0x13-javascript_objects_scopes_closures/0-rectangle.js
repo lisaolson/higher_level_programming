@@ -1,7 +1,6 @@
 #!/usr/bin/node
 // Defines Rectangle Class
 
-
 class Rectangle {
 }
 
