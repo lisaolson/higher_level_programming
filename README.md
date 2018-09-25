@@ -1,31 +1,29 @@
-# Low Level Programming
-This repo contains a series of low level projects I completed in C at Holberton School.
+# High Level Programming
+This repo contains a series of projects I completed primarily in Python3 at Holberton School. Also included are projects designed in bash, MySQL, and JavaScript
 
 ### Concepts
-- Compilation
-- Conditionals, Operators, Loops
+- Object Oriented Programming
+- Variables, Data Structures, Operators, Expressions, Loops
+- Operators and Conditionals
 - Functions
-- Pointers, Double Pointers, Function Pointers
-- Arrays and Matrices
-- Static and Dynamic Libraries
-- Stack and Heap
-- Memory Allocation
-- Binary Operations
+- Imports
+- Exceptions
+- Unit Testing
+- Classes and Inheritance
+- SQL and SQLAlchemy
+- Requests and Web scraping
+- Commenting and Coding style standard
 
 ### Requirements
-- gcc 4.8.4
 - Ubuntu 14.04 LTS
-- Flags -Wall -Werror -Wextra -pedantic
-
-### Installation
-git clone the directory
-```git clone https://github.com/lisaolson/[Project Directory]```
-
-Compile
-```gcc -Wall -Werror -Wextra -pedantic *.c -o [c files]```
-
-### Usage
-```./[executable file]```
+- Python 3.4
+- pip3 1.5
+- pep8 1.7
+- MySQL 5.7
+- MySQLdb 1.3
+- SQLAlchemy 1.1
+- node 6.10
+- semistandard 11.0
 
 #### Author
 Lisa Olson | @eunoia_lo
