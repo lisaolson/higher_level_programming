@@ -1,5 +1,5 @@
 # High Level Programming
-This repo contains a series of projects I completed primarily in Python3 at Holberton School. Also included are projects designed in bash, MySQL, and JavaScript
+This repo contains a series of projects I completed primarily in Python3. Also included are projects designed in bash, MySQL, and JavaScript
 
 ### Concepts
 - Object Oriented Programming
